@@ -22,12 +22,22 @@
         // console.log(element);
 
         // listen to the click event
+        element.addEventListener("click", counterIncrement, false);
         
         //take a number which start from zero
         let counter = 0;
         
+        console.log(counter)
+
+        //function to increment the number
+        function counterIncrement() {
         //every click increment a number
         counter = counter + 1;
+    }
+     
+        counterIncrement();
+
+        console.log(counter)
     </script>
 </body>
 </html>
