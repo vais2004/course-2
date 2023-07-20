@@ -15,29 +15,18 @@
     
 </head>
 <body>
-    <button id="btnCounter">+</button>
+    <input id="inputAmount" type="text"></input>
+    <button id="btnAddExpence">+</button>
     <script>
+
         //get the btn element
-        const element = document.querySelector(btnCounter);
-        // console.log(element);
+        
+        const element = document.querySelector("#btnAddExpence");
 
         // listen to the click event
-        element.addEventListener("click", counterIncrement, false);
         
-        //take a number which start from zero
-        let counter = 0;
-        
-        console.log(counter)
+        element.addEventListener("click", addExpenceToTotal, false);
 
-        //function to increment the number
-        function counterIncrement() {
-        //every click increment a number
-        counter = counter + 1;
-    }
-     
-        counterIncrement();
-
-        console.log(counter)
     </script>
 </body>
 </html>
