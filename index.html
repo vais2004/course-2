@@ -24,6 +24,12 @@
         //get the heading element
         const headingEl = document.querySelector("#headingTotal");
 
+        //get the reference to desc element
+        const inputDescEl = document.querySelector("#inputDesc");
+
+        //ref to input amount
+        const inputElement = document.querySelector("#inputAmount");
+
         //init value of expense at 0
         let totalExpense = 0;
 
@@ -36,6 +42,9 @@
         //read value from inputAmount
         const inputElement = document.querySelector("#inputAmount");
         const textAmount = inputElement.value;
+
+        //read the desc from inputDesc
+        const textDesc = inputDescEl
         
         //convert it to number
         const expense = parseInt(textAmount, 10);
@@ -44,6 +53,7 @@
         totalExpense = totalExpense + expense;
         
         //set the heading element to totalExpense
+        headingEl.textContent = totalExpense;
         }
 
         //get the btn element
