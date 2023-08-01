@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>personal expense</title>
+    
     <style>
         body{
             display: flex;
@@ -16,9 +18,11 @@
     
 </head> 
 <body>
+
     <h1 id="headingTotal"></h1>
     <input id="inputAmount" type="text"></input>
     <button id="btnAddExpence">+</button>
+    
     <script>
 
         //get the heading element
@@ -35,7 +39,7 @@
 
         //set the heading element to totalExpense
         headingEl.textContent = totalExpense;
-
+ 
         //onButtonClick add inputAmount to totalExpense
         function addExpenceToTotal() {
 
