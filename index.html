@@ -20,9 +20,10 @@
 <body>
 
     <h1 id="headingTotal"></h1>
-    <input id="inputAmount" type="text"></input>
+    <input id="inputAmount" type="text">
+    <input id="inputDesc" type="text">
     <button id="btnAddExpence">+</button>
-    
+
     <script>
 
         //get the heading element
@@ -44,11 +45,10 @@
         function addExpenceToTotal() {
 
         //read value from inputAmount
-        const inputElement = document.querySelector("#inputAmount");
         const textAmount = inputElement.value;
 
         //read the desc from inputDesc
-        const textDesc = inputDescEl
+        const textDesc = inputDescEl.value;
         
         //convert it to number
         const expense = parseInt(textAmount, 10);
@@ -67,5 +67,6 @@
         element.addEventListener("click", addExpenceToTotal, false);
 
     </script>
+
 </body>
 </html>
