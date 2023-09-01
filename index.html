@@ -23,6 +23,7 @@
     <input id="inputAmount" type="text">
     <input id="inputDesc" type="text">
     <button id="btnAddExpence">+</button>
+    <div id="expenseTable"></div>
  
     <script>
 
@@ -40,9 +41,13 @@
 
         //set the heading element to totalExpense
         headingEl.textContent = totalExpense;
- 
+
+        //allExpences at once place
+        const allExpences = [];
+
         //onButtonClick add inputAmount to totalExpense
         function addExpenceToTotal() {
+            const expenseItem = {};
 
         //read value from inputAmount
         const textAmount = inputElement.value;
@@ -53,11 +58,22 @@
         //convert it to number
         const expense = parseInt(textAmount, 10);
 
+        //put it to number
+        expenseItem.decs = textDesc;
+        expenseItem.amount = expense;
+
+        console.log(expenseItem)
+
+        allExpences.push(expenseItem);
+
         //add thar value to totalExpense
         totalExpense = totalExpense + expense;
         
         //set the heading element to totalExpense
-        headingEl.textContent = totalExpense;
+        const someText = "the expense for this month is: " + totalExpense;
+        //const someText = 'the expense for this month is: ${totalExpense}'
+
+        headingEl.textContent = someText;
         }
 
         //get the btn element
